@@ -52,5 +52,10 @@ Open-Meteo Weather API: https://open-meteo.com/
 - Widget test executed successfully.
 - Release APK generated successfully.
 
-## 9. Defect Log
+## 9. Team Contributions
+- RAMANA VYSHNAVI: Main Flutter application development and implementation.
+- UPPALA SRI LAKSHMI PRASANNA: Application testing and feedback.
+- V. SANTHOSH: Team member.
+
+## 10. Defect Log
 Refer to [DEFECT_LOG.md](DEFECT_LOG.md) for testing details and defect status.
