@@ -39,3 +39,21 @@ flutter analyze
 flutter test
 flutter run
 flutter build apk --release
+```
+
+## 5. QA Review
+
+**Reviewed by:** V. SANTHOSH  
+**College ID:** 248X1A42G4
+
+### Review Summary
+
+- Reviewed the functional testing results.
+- Verified the documented test cases and their expected results.
+- Reviewed the code quality findings and fixes.
+- Confirmed that the widget test passed.
+- Identified physical Android device testing as pending.
+
+### QA Status
+
+The documented emulator testing and code quality checks were reviewed. Physical device testing and additional robustness testing are still pending.
