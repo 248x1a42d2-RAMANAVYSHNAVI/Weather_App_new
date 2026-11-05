@@ -1,54 +1,67 @@
 # Weather App – Defect Log
 
-## Project Information
-- Project Name: Weather App
-- Platform: Android
-- Framework: Flutter
-- Testing Environment: Android Emulator (Medium Phone)
+## 1. Project Information
 
-## 1. Functional Testing Summary
+- **Project Name:** Weather App
+- **Platform:** Android
+- **Framework:** Flutter
+- **Programming Language:** Dart
+- **Testing Environment:** Android Emulator (Medium Phone)
 
-The following application features were tested:
+## 2. Functional Testing Summary
 
-| Test Case | Result |
-|---|---|
-| Search weather by city | Passed |
-| Display current weather | Passed |
-| Display 7-day forecast | Passed |
-| Add City form validation | Passed |
-| Save and remove cities | Passed |
-| Celsius/Fahrenheit settings | Passed |
-| Weather Details screen | Passed |
+| S.No. | Test Case | Expected Result | Actual Result | Status |
+|---|---|---|---|---|
+| 1 | Search weather by city | Weather information should be displayed | Worked as expected | Passed |
+| 2 | Display current weather | Current weather details should appear | Worked as expected | Passed |
+| 3 | Display 7-day forecast | Forecast should be displayed | Worked as expected | Passed |
+| 4 | Add City form validation | Invalid input should show validation messages | Worked as expected | Passed |
+| 5 | Save and remove cities | Cities should be saved and removed | Worked as expected | Passed |
+| 6 | Celsius/Fahrenheit settings | Temperature unit should change | Worked as expected | Passed |
+| 7 | Weather Details screen | Detailed weather information should appear | Worked as expected | Passed |
 
-No functional defects were observed during the tests performed.
+## 3. Identified Code Quality Findings
 
-## 2. Static Analysis Findings
+The following findings were reported during `flutter analyze`.
 
-The following code-quality findings were reported by `flutter analyze`:
+| S.No. | Finding | Location | Steps to Reproduce | Status |
+|---|---|---|---|---|
+| 1 | Use of print statements | lib/services/weather_service.dart | Run `flutter analyze` | Pending |
+| 2 | Deprecated Radio button properties | lib/settings_screen.dart | Run `flutter analyze` | Pending |
+| 3 | Relative imports in test file | test/widget_test.dart | Run `flutter analyze` | Pending |
+| 4 | Unused import in test file | test/widget_test.dart | Run `flutter analyze` | Pending |
 
-| Finding | Location | Status |
-|---|---|---|
-| Use of print statements | weather_service.dart | Pending |
-| Deprecated Radio button properties | settings_screen.dart | Pending |
-| Relative imports in test file | widget_test.dart | Pending |
-| Unused import in test file | widget_test.dart | Pending |
+## 4. Testing Commands
 
-## 3. Testing Commands
+The following commands were used during project testing:
 
 ```bash
+flutter pub get
 flutter analyze
 flutter test
 flutter run
 flutter build apk --release
 ```
 
-## 4. Testing Result
+## 5. Testing Results
 
-- Flutter application built successfully.
-- Application installed and ran on Android Emulator.
-- Flutter widget tests passed.
-- Release APK generated successfully.
+- Dependencies were installed successfully.
+- Flutter widget test completed successfully.
+- Application ran successfully on the Android Emulator.
+- Release APK was generated successfully.
+- Functional tests listed above passed.
+- Code quality findings are documented for further improvement.
 
-## 5. Conclusion
+## 6. Known Limitations and Pending Verification
 
-The Weather App completed the functional tests listed above successfully. Static analysis findings are documented for further code-quality improvements.
+- Static analysis findings require further improvement.
+- Physical Android device installation and testing are pending.
+- Additional robustness testing, including offline conditions and repeated user actions, requires verification.
+
+## 7. Conclusion
+
+The Weather App successfully completed the functional tests listed in this document. The application was built and tested on an Android Emulator, and a release APK was generated successfully.
+
+The code quality findings and pending verification items are documented for future improvement.
+
+**Note:** Only verified test results are marked as Passed. Pending items should be updated after they are fixed or tested.
