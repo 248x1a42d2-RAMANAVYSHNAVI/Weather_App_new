@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/weather_provider.dart';
@@ -28,29 +27,27 @@ class SettingsScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-
                 const SizedBox(height: 15),
 
-                RadioListTile<String>(
-                  title: const Text('Celsius (°C)'),
-                  value: 'Celsius',
+                RadioGroup<String>(
                   groupValue: provider.temperatureUnit,
                   onChanged: (value) {
                     if (value != null) {
                       provider.setTemperatureUnit(value);
                     }
                   },
-                ),
-
-                RadioListTile<String>(
-                  title: const Text('Fahrenheit (°F)'),
-                  value: 'Fahrenheit',
-                  groupValue: provider.temperatureUnit,
-                  onChanged: (value) {
-                    if (value != null) {
-                      provider.setTemperatureUnit(value);
-                    }
-                  },
+                  child: Column(
+                    children: [
+                      RadioListTile<String>(
+                        title: const Text('Celsius (°C)'),
+                        value: 'Celsius',
+                      ),
+                      RadioListTile<String>(
+                        title: const Text('Fahrenheit (°F)'),
+                        value: 'Fahrenheit',
+                      ),
+                    ],
+                  ),
                 ),
 
                 const SizedBox(height: 20),

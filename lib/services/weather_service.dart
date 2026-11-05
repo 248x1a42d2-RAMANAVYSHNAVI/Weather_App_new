@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherService {
@@ -11,9 +12,9 @@ class WeatherService {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      print(data);
+      debugPrint(data.toString());
     } else {
-      print('Error: ${response.statusCode}');
+      debugPrint('Error: ${response.statusCode}');
     }
   }
 }

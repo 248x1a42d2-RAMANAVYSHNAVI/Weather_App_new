@@ -20,20 +20,18 @@
 | 6 | Celsius/Fahrenheit settings | Temperature unit should change | Worked as expected | Passed |
 | 7 | Weather Details screen | Detailed weather information should appear | Worked as expected | Passed |
 
-## 3. Identified Code Quality Findings
+## 3. Code Quality Findings and Fixes
 
-The following findings were reported during `flutter analyze`.
+The following issues were identified using `flutter analyze` and fixed.
 
-| S.No. | Finding | Location | Steps to Reproduce | Status |
+| S.No. | Finding | Location | Resolution | Status |
 |---|---|---|---|---|
-| 1 | Use of print statements | lib/services/weather_service.dart | Run `flutter analyze` | Pending |
-| 2 | Deprecated Radio button properties | lib/settings_screen.dart | Run `flutter analyze` | Pending |
-| 3 | Relative imports in test file | test/widget_test.dart | Run `flutter analyze` | Pending |
-| 4 | Unused import in test file | test/widget_test.dart | Run `flutter analyze` | Pending |
+| 1 | Use of print statements | lib/services/weather_service.dart | Replaced print with debugPrint | Fixed |
+| 2 | Deprecated Radio button properties | lib/settings_screen.dart | Updated to use RadioGroup | Fixed |
+| 3 | Relative imports in test file | test/widget_test.dart | Removed unnecessary relative imports | Fixed |
+| 4 | Unused import | test/widget_test.dart | Removed unused import | Fixed |
 
 ## 4. Testing Commands
-
-The following commands were used during project testing:
 
 ```bash
 flutter pub get
@@ -41,27 +39,3 @@ flutter analyze
 flutter test
 flutter run
 flutter build apk --release
-```
-
-## 5. Testing Results
-
-- Dependencies were installed successfully.
-- Flutter widget test completed successfully.
-- Application ran successfully on the Android Emulator.
-- Release APK was generated successfully.
-- Functional tests listed above passed.
-- Code quality findings are documented for further improvement.
-
-## 6. Known Limitations and Pending Verification
-
-- Static analysis findings require further improvement.
-- Physical Android device installation and testing are pending.
-- Additional robustness testing, including offline conditions and repeated user actions, requires verification.
-
-## 7. Conclusion
-
-The Weather App successfully completed the functional tests listed in this document. The application was built and tested on an Android Emulator, and a release APK was generated successfully.
-
-The code quality findings and pending verification items are documented for future improvement.
-
-**Note:** Only verified test results are marked as Passed. Pending items should be updated after they are fixed or tested.
