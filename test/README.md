@@ -1,121 +1,69 @@
+# Weather App – Testing Documentation
 
-# Weather App
+## 1. Introduction
 
-## 1. Project Description
+This document describes the testing activities performed for the Weather App, a Flutter-based Android application that provides current weather information and a 7-day forecast using the Open-Meteo API.
 
-Weather App is a Flutter-based Android application that allows users to search for weather information in different cities. It provides current weather conditions, temperature details, and a 7-day weather forecast using the Open-Meteo API.
+## 2. Testing Environment
 
-## 2. Features
+- **Project Name:** Weather App
+- **Platform:** Android
+- **Framework:** Flutter
+- **Programming Language:** Dart
+- **Testing Environment:** Android Emulator (Medium Phone)
 
-- Search weather by city name.
-- View current temperature and weather conditions.
-- Check feels-like temperature.
-- View humidity and wind speed.
-- View a 7-day weather forecast.
-- Save favourite cities.
-- Add and remove saved cities.
-- Change temperature units between Celsius and Fahrenheit.
-- View detailed weather information.
-- Form validation when adding a city.
-- Store saved cities and temperature preferences locally.
+## 3. Testing Types
 
-## 3. Technologies Used
+- Functional Testing
+- Widget Testing
+- Static Code Analysis
+- Form Validation Testing
+- API Integration Testing
+- Release Build Testing
 
-- Flutter
-- Dart
-- Provider (State Management)
-- Open-Meteo Weather API
-- HTTP package
-- Shared Preferences
-- Visual Studio Code
+## 4. Functional Test Cases
 
-## 4. Data Source
+| S.No. | Test Case | Expected Result | Status |
+|---|---|---|---|
+| 1 | Search weather by city | Weather information should be displayed | Passed |
+| 2 | Display current weather | Current weather details should appear | Passed |
+| 3 | Display 7-day forecast | Forecast should be displayed | Passed |
+| 4 | Add City form validation | Invalid input should show validation messages | Passed |
+| 5 | Save and remove cities | Cities should be saved and removed | Passed |
+| 6 | Celsius/Fahrenheit settings | Temperature unit should change | Passed |
+| 7 | Weather Details screen | Detailed weather information should appear | Passed |
 
-Weather information is retrieved from the Open-Meteo public API.
+## 5. Testing Commands
 
-- Geocoding API: https://geocoding-api.open-meteo.com/
-- Weather API: https://api.open-meteo.com/
-
-The Geocoding API converts city names into geographical coordinates. The Weather API provides current weather conditions and forecast information.
-
-## 5. Team Members
-
-1. RAMANA VYSHNAVI
-2. UPPALA SRI LAKSHMI PRASANNA
-3. V. SANTHOSH
-
-## 6. Team Contributions
-
-- RAMANA VYSHNAVI: [Add actual work completed]
-- UPPALA SRI LAKSHMI PRASANNA: [Add actual work completed]
-- V. SANTHOSH: [Add actual work completed]
-
-## 7. Installation and Run Instructions
-
-1. Install Flutter SDK.
-2. Install Visual Studio Code.
-3. Install Flutter and Dart extensions.
-4. Clone or download the project.
-5. Open the project folder in VS Code.
-6. Open the terminal and run:
+Run the following commands from the project root directory:
 
 ```bash
 flutter pub get
-```
-
-7. Connect an Android device or start an emulator.
-8. Run the application:
-
-```bash
+flutter analyze
+flutter test
 flutter run
 ```
 
-## 8. Testing
+## 6. Testing Results
 
-Run the Flutter tests using:
+- Flutter dependencies installed successfully.
+- Flutter static analysis completed with no issues.
+- Widget test executed successfully.
+- Application launched successfully on Android Emulator.
+- Release APK generated successfully.
 
-```bash
-flutter test
-```
+## 7. Pending Testing
 
-The available Flutter tests were executed successfully in the development environment.
+The following tests are pending:
 
-## 9. Screenshots
+- Physical Android device installation and testing.
+- Offline-condition testing.
+- Empty and very long input testing.
+- Repeated user-action testing.
+- Screen rotation testing.
 
-### Home Screen
+## 8. Conclusion
 
-![Home Screen](../screenshorts/home_screen.png)
+The Weather App passed the documented functional tests, Flutter static analysis, and widget test on the Android Emulator. Physical device testing and additional robustness testing remain pending.
 
-### Weather Details Screen
-
-![Weather Details](../screenshorts/weather_details.png)
-
-### Add City Screen
-
-![Add City](../screenshorts/add_city.png)
-
-## 10. Release APK
-
-Release APK location:
-
-`build/app/outputs/flutter-apk/app-release.apk`
-
-Build command:
-
-```bash
-flutter build apk --release
-```
-
-## 11. Defect Log
-
-Refer to the `DEFECT_LOG.md` file for defects identified during application testing, reproduction steps, and their resolution status.
-
-## 12. Future Enhancements
-
-- Improve the user interface.
-- Add more weather information.
-- Improve error handling and testing.
-
-## 13. Institution
-
-Kallam Harinadh Reddy Institute of Technology (KHIT), Guntur.
+Refer to the project's `DEFECT_LOG.md` file for detailed test results, code quality findings, and defect status.
